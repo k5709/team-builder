@@ -1,4 +1,24 @@
 .App {
   text-align: center;
   justify-content: center;
+  font-size: larger;
+}
+
+.Form {
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.Form form {
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.Form label input{
+  width: 30%;
+
+}
+.positionSelection {
+  width: 30%;
 }
