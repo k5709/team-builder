@@ -24,8 +24,9 @@ function App() {
     const { name, value } = evt.target
     setFormValues({
       ...formValues,
-      [name]: value}
-      );
+      [name]: value
+    }
+    );
   }
   const submit = (evt) => {
     evt.preventDefault()
@@ -33,8 +34,8 @@ function App() {
       playerName: formValues.playerName.trim(),
       position: formValues.position.trim(),
       age: formValues.age.trim()
-  }
-  setPlayers(players.concat(newPlayer));
+    }
+    setPlayers(players.concat(newPlayer));
     setFormValues(initialFormValues);
   }
 
@@ -51,11 +52,18 @@ function App() {
           </div>
         )
       })}
-      <div className='Form'>
-        <Form change={change}
-         submit={submit}
-          formValues={formValues}/>
-      </div>
+      {/* <div className='Form'> */}
+      <Form change={change}
+        submit={submit}
+        formValues={formValues} />
+
+      {players.map(player => {
+        return (
+          <div>
+            {player.playerName}, {player.position}, {player.age}
+          </div>
+        )
+      })}
     </div>
   )
 }
